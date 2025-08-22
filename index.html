@@ -2,95 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Venkata Kiran Kumar Tummala - Portfolio</title>
+    <title>Venkata_T Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        :root {
-            --primary-color: #6366f1; /* Tailwind's indigo-500 */
-            --secondary-color: #a5b4fc; /* Tailwind's indigo-300 */
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0c0a09; /* Stone-950 */
-            color: #d4d4d4; /* Zinc-400 */
-            transition: all 0.3s ease-in-out;
-            animation: fadeIn 1s ease-in-out;
-        }
-
-        /* Keyframes for a simple fade-in effect on page load */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        /* Gradient background for sections to add visual depth */
-        .section-card {
-            background: linear-gradient(145deg, #1f2937, #111827); /* Dark gradient */
-            border: 1px solid #374151; /* Subtle border */
-            border-radius: 1.5rem;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5); /* Deeper, softer shadow */
-            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-
-        .section-card:hover {
-            transform: translateY(-8px) scale(1.02); /* More pronounced pop-up */
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
-        }
-
-        /* Inner cards for a nested, layered effect */
-        .inner-card {
-            background: #111827;
-            border-radius: 0.75rem;
-            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .inner-card:hover {
-            transform: scale(1.03);
-        }
-
-        /* Professional, custom heading styles */
-        h1, h2 {
-            font-family: 'Poppins', sans-serif;
-            color: #e5e7eb; /* Off-white color */
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-        }
-
-        /* Hover effects for links and buttons */
-        a {
-            transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
-        }
-
-        a:hover {
-            color: var(--primary-color);
-            transform: translateY(-2px);
-        }
-        
-        /* Custom scrollbar for a professional look */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #111827;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: var(--primary-color);
-            border-radius: 5px;
-            border: 2px solid #111827;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--secondary-color);
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="antialiased">
 
-    <!-- Header & Navigation -->
-    <header class="bg-gray-900 shadow-xl sticky top-0 z-50">
+    <header class="bg-gray-900/80 backdrop-blur-sm shadow-xl sticky top-0 z-50">
         <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row justify-between items-center">
-            <a href="#home" class="text-2xl font-bold text-gray-200 mb-2 sm:mb-0 transition-colors duration-200 hover:text-indigo-400">Venkata K. Tummala</a>
+            <a href="#" class="text-2xl font-bold text-gray-200 mb-2 sm:mb-0 transition-colors duration-200 hover:text-indigo-400">Venkata K. Tummala</a>
             <div class="flex flex-wrap justify-center gap-4 text-sm font-medium">
                 <a href="#about" class="text-gray-400 hover:text-indigo-400 transition-colors duration-200">About</a>
                 <a href="#experience" class="text-gray-400 hover:text-indigo-400 transition-colors duration-200">Experience</a>
@@ -102,18 +25,22 @@
         </nav>
     </header>
 
-    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8">
 
-        <!-- Hero/About Section -->
-        <section id="about" class="section-card p-8 sm:p-12 mb-12 text-center">
-            <div class="flex flex-col items-center">
-                <!-- Replace the placeholder image URL with your own photo URL here -->
-                <img src="my_photo.avif" 
+        <section id="about" class="relative text-center py-20 sm:py-32 mb-12 rounded-3xl overflow-hidden">
+            
+            <div class="absolute inset-0 z-0">
+                <img src="images/header-background.jpg" alt="Abstract technology background" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black/60"></div>
+            </div>
+
+            <div class="relative z-10 flex flex-col items-center px-4">
+                <img src="images/my_photo.avif" 
                      alt="Venkata Kiran Kumar Tummala" 
-                     class="w-32 h-32 rounded-full mb-4 shadow-md object-cover">
+                     class="w-32 h-32 rounded-full mb-4 shadow-lg object-cover border-4 border-gray-600">
                 <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-100 mb-2 tracking-wide">Venkata Kiran Kumar Tummala</h1>
                 <p class="text-xl text-indigo-400 mb-4 font-semibold">Software Development Engineer</p>
-                <p class="max-w-prose text-gray-400 leading-relaxed">
+                <p class="max-w-prose text-gray-300 leading-relaxed">
                     Innovative Software Engineer with 4+ years of experience designing and delivering scalable, high-quality software solutions. Proven expertise in JavaScript, AI/ML integration, distributed systems, and modern UI frameworks. Adept at implementing best practices for code quality, reusability, and performance, while mentoring peers and promoting knowledge-sharing. Passionate about building intuitive, customizable software that empowers users and drives business value
                 </p>
                 <div class="flex gap-4 mt-6 text-gray-400">
@@ -131,160 +58,154 @@
             </div>
         </section>
 
-        <!-- Skills Section -->
+        <div class="py-12">
+             <section id="experience" class="section-card p-8 sm:p-12 mb-12">
+                <h2 class="text-3xl font-bold text-center mb-8 tracking-wide">Experience</h2>
+                <div class="mb-8 p-6 inner-card shadow-inner">
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2">
+                        <h3 class="text-xl font-semibold text-indigo-400">Software Engineer</h3>
+                        <span class="text-gray-400 text-sm">ServiceNow | Mar 2022 - Dec 2023</span>
+                    </div>
+                    <ul class="list-disc list-inside space-y-2 text-gray-400">
+                        <li>Engineered scalable predictive ML solutions using Python, enhancing process reliability and reducing manual workflows by 30%.</li>
+                        <li>Performed detailed code reviews and implemented CI/CD pipelines with Jenkins, ensuring maintainable and testable code.</li>
+                        <li>Optimized cloud infrastructure by integrating Elasticsearch and Kafka, resulting in improved system performance.</li>
+                        <li>Developed AI/ML algorithms for runtime prediction in cloud automations, bolstering system robustness and reducing errors by 18%.</li>
+                    </ul>
+                </div>
+                <div class="mb-8 p-6 inner-card shadow-inner">
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2">
+                        <h3 class="text-xl font-semibold text-indigo-400">Associate Software Engineer</h3>
+                        <span class="text-gray-400 text-sm">ServiceNow | Jul 2020 - Mar 2022</span>
+                    </div>
+                    <ul class="list-disc list-inside space-y-2 text-gray-400">
+                        <li>Constructed and optimized predictive models using AI/ML techniques, enhancing end-user experience and bolstering system reliability.</li>
+                        <li>Established robust unit testing infrastructure that increased test coverage by 50% and minimized production bugs.</li>
+                        <li>Designed and implemented APIs that facilitated seamless integration with third-party systems.</li>
+                    </ul>
+                </div>
+                <div class="p-6 inner-card shadow-inner">
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2">
+                        <h3 class="text-xl font-semibold text-indigo-400">Software Engineering Intern</h3>
+                        <span class="text-gray-400 text-sm">ServiceNow | Jan 2020 - Mar 2022</span>
+                    </div>
+                    <ul class="list-disc list-inside space-y-2 text-gray-400">
+                        <li>Drafted comprehensive design documentation and developed automated grading scripts using Python, reducing grading time by 60%.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="skills" class="section-card p-8 sm:p-12 mb-12">
+                <h2 class="text-3xl font-bold text-center mb-8 tracking-wide">Skills</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="inner-card p-6 shadow-inner">
+                        <h3 class="text-xl font-semibold mb-2 text-indigo-400">Languages</h3>
+                        <ul class="list-disc list-inside space-y-1 text-gray-400">
+                            <li>Java</li>
+                            <li>Python</li>
+                            <li>JavaScript</li>
+                            <li>C, C++</li>
+                        </ul>
+                    </div>
+                    <div class="inner-card p-6 shadow-inner">
+                        <h3 class="text-xl font-semibold mb-2 text-indigo-400">Frameworks & Tools</h3>
+                        <ul class="list-disc list-inside space-y-1 text-gray-400">
+                            <li>Node, REST</li>
+                            <li>Git, Jenkins, Selenium</li>
+                            <li>JIRA, VS Code</li>
+                        </ul>
+                    </div>
+                    <div class="inner-card p-6 shadow-inner">
+                        <h3 class="text-xl font-semibold mb-2 text-indigo-400">Databases & Concepts</h3>
+                        <ul class="list-disc list-inside space-y-1 text-gray-400">
+                            <li>PostgreSQL, MySQL, Dynamo DB</li>
+                            <li>Distributed Systems, Microservices</li>
+                            <li>Algorithm Design, Linear Programming, Agile Development</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects" class="section-card p-8 sm:p-12 mb-12">
+                <h2 class="text-3xl font-bold text-center mb-8 tracking-wide">Projects</h2>
+                <div class="mb-8 p-6 inner-card shadow-inner">
+                    <h3 class="text-xl font-semibold text-indigo-400 mb-2">Cloud Automation</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-400">
+                        <li>Built a scalable system to clone customer data across data centers, reducing latency by 40% through parallel processing and data compression.</li>
+                        <li>Leveraged predictive modeling techniques to detect anomalies in cloud automation processes, alerting stakeholders promptly.</li>
+                    </ul>
+                </div>
+                <div class="mb-8 p-6 inner-card shadow-inner">
+                    <h3 class="text-xl font-semibold text-indigo-400 mb-2">Conversational AI</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-400">
+                        <li>Developed a conversational AI using OpenAI resources, enabling advanced natural language processing (NLP) for meaningful user interactions.</li>
+                    </ul>
+                </div>
+                <div class="p-6 inner-card shadow-inner">
+                    <h3 class="text-xl font-semibold text-indigo-400 mb-2">Error Prediction</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-400">
+                        <li>Implemented machine learning algorithms for anomaly detection, reducing system errors by 30% and improving operational efficiency.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="education" class="section-card p-8 sm:p-12 mb-12">
+    <h2 class="text-3xl font-bold text-center mb-8 tracking-wide">Education</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+        <div class="p-6 inner-card shadow-inner">
+            <h3 class="text-xl font-semibold text-indigo-400 flex items-center gap-x-3 mb-2">
+                <img src="images/usf-logo.png" alt="University of South Florida logo" class="w-8 h-8 object-contain">
+                <span>University Of South Florida</span>
+            </h3>
+            <p class="text-gray-400">Master's, CS</p>
+            <p class="text-gray-500 text-sm">Jan 2024 - May 2025</p>
+            <p class="text-gray-300 mt-2">GPA: 3.78</p>
+        </div>
+
+        <div class="p-6 inner-card shadow-inner">
+            <h3 class="text-xl font-semibold text-indigo-400 flex items-center gap-x-3 mb-2">
+                <img src="images/bits-logo.png" alt="BITS logo" class="w-8 h-8 object-contain">
+                <span>Birla Institute of Technology and Science</span>
+            </h3>
+            <p class="text-gray-400">Master's, Computer Science(Al and ML)</p>
+            <p class="text-gray-500 text-sm">2021-2023</p>
+            <p class="text-gray-300 mt-2">GPA: 3.2</p>
+        </div>
+
+        <div class="p-6 inner-card shadow-inner">
+            <h3 class="text-xl font-semibold text-indigo-400 flex items-center gap-x-3 mb-2">
+                <img src="images/klu-logo.png" alt="KLU logo" class="w-8 h-8 object-contain">
+                <span>Koneru Lakshmaiah University</span>
+            </h3>
+            <p class="text-gray-400">Bachelor, Electrical</p>
+            <p class="text-gray-500 text-sm">2016-2020</p>
+            <p class="text-gray-300 mt-2">GPA: 3.4</p>
+        </div>
         
+    </div>
+</section>
 
-        <!-- Experience Section -->
-        <section id="experience" class="section-card p-8 sm:p-12 mb-12">
-            <h2 class="text-3xl font-bold text-center mb-8 tracking-wide">Experience</h2>
-            <!-- ServiceNow - Software Engineer -->
-            <div class="mb-8 p-6 inner-card shadow-inner">
-                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2">
-                    <h3 class="text-xl font-semibold text-indigo-400">Software Engineer</h3>
-                    <span class="text-gray-400 text-sm">ServiceNow | Mar 2022 - Dec 2023</span>
+            <section id="contact" class="section-card p-8 sm:p-12 text-center">
+                <h2 class="text-3xl font-bold text-gray-100 mb-6 tracking-wide">Contact Me</h2>
+                <div class="flex flex-col items-center space-y-4 text-gray-400">
+                    <p>Tampa, Florida</p>
+                    <p>Phone: +1-813-363-9071</p>
+                    <p>Email: venkatakiran.tummala@gmail.com</p>
                 </div>
-                <ul class="list-disc list-inside space-y-2 text-gray-400">
-                    <li>Engineered scalable predictive ML solutions using Python, enhancing process reliability and reducing manual workflows by 30%.</li>
-                    <li>Performed detailed code reviews and implemented CI/CD pipelines with Jenkins, ensuring maintainable and testable code.</li>
-                    <li>Optimized cloud infrastructure by integrating Elasticsearch and Kafka, resulting in improved system performance.</li>
-                    <li>Developed AI/ML algorithms for runtime prediction in cloud automations, bolstering system robustness and reducing errors by 18%.</li>
-                </ul>
-            </div>
-            <!-- ServiceNow - Associate Software Engineering -->
-            <div class="mb-8 p-6 inner-card shadow-inner">
-                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2">
-                    <h3 class="text-xl font-semibold text-indigo-400">Associate Software Engineer</h3>
-                    <span class="text-gray-400 text-sm">ServiceNow | Jul 2020 - Mar 2022</span>
+                <div class="flex justify-center gap-6 mt-6">
+                    <a href="https://linkedin.com/in/venkatakiran-tummala" target="_blank" class="text-gray-400 hover:text-indigo-400 transition-colors duration-200">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.763s.784-1.763 1.75-1.763 1.75.79 1.75 1.763-.783 1.763-1.75 1.763zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.355 7 2.093v7.142z"/></svg>
+                    </a>
+                    <a href="https://github.com/yourusername" target="_blank" class="text-gray-400 hover:text-gray-200 transition-colors duration-200">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.809 1.305 3.493.998.108-.77.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.465-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.772.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
                 </div>
-                <ul class="list-disc list-inside space-y-2 text-gray-400">
-                    <li>Constructed and optimized predictive models using AI/ML techniques, enhancing end-user experience and bolstering system reliability.</li>
-                    <li>Established robust unit testing infrastructure that increased test coverage by 50% and minimized production bugs.</li>
-                    <li>Designed and implemented APIs that facilitated seamless integration with third-party systems.</li>
-                </ul>
-            </div>
-            <!-- ServiceNow - Software Engineering Intern -->
-            <div class="p-6 inner-card shadow-inner">
-                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2">
-                    <h3 class="text-xl font-semibold text-indigo-400">Software Engineering Intern</h3>
-                    <span class="text-gray-400 text-sm">ServiceNow | Jan 2020 - Mar 2022</span>
-                </div>
-                <ul class="list-disc list-inside space-y-2 text-gray-400">
-                    <li>Drafted comprehensive design documentation and developed automated grading scripts using Python, reducing grading time by 60%.</li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="skills" class="section-card p-8 sm:p-12 mb-12">
-            <h2 class="text-3xl font-bold text-center mb-8 tracking-wide">Skills</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Languages -->
-                <div class="inner-card p-6 shadow-inner">
-                    <h3 class="text-xl font-semibold mb-2 text-indigo-400">Languages</h3>
-                    <ul class="list-disc list-inside space-y-1 text-gray-400">
-                        <li>Java</li>
-                        <li>Python</li>
-                        <li>JavaScript</li>
-                        <li>C, C++</li>
-                    </ul>
-                </div>
-                <!-- Frameworks & Tools -->
-                <div class="inner-card p-6 shadow-inner">
-                    <h3 class="text-xl font-semibold mb-2 text-indigo-400">Frameworks & Tools</h3>
-                    <ul class="list-disc list-inside space-y-1 text-gray-400">
-                        <li>Node, REST</li>
-                        <li>Git, Jenkins, Selenium</li>
-                        <li>JIRA, VS Code</li>
-                    </ul>
-                </div>
-                <!-- Databases & Concepts -->
-                <div class="inner-card p-6 shadow-inner">
-                    <h3 class="text-xl font-semibold mb-2 text-indigo-400">Databases & Concepts</h3>
-                    <ul class="list-disc list-inside space-y-1 text-gray-400">
-                        <li>PostgreSQL, MySQL, Dynamo DB</li>
-                        <li>Distributed Systems, Microservices</li>
-                        <li>Algorithm Design, Linear Programming, Agile Development</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="section-card p-8 sm:p-12 mb-12">
-            <h2 class="text-3xl font-bold text-center mb-8 tracking-wide">Projects</h2>
-            <!-- Cloud Automation -->
-            <div class="mb-8 p-6 inner-card shadow-inner">
-                <h3 class="text-xl font-semibold text-indigo-400 mb-2">Cloud Automation</h3>
-                <ul class="list-disc list-inside space-y-2 text-gray-400">
-                    <li>Built a scalable system to clone customer data across data centers, reducing latency by 40% through parallel processing and data compression.</li>
-                    <li>Leveraged predictive modeling techniques to detect anomalies in cloud automation processes, alerting stakeholders promptly.</li>
-                </ul>
-            </div>
-            <!-- Conversational AI -->
-            <div class="mb-8 p-6 inner-card shadow-inner">
-                <h3 class="text-xl font-semibold text-indigo-400 mb-2">Conversational AI</h3>
-                <ul class="list-disc list-inside space-y-2 text-gray-400">
-                    <li>Developed a conversational AI using OpenAI resources, enabling advanced natural language processing (NLP) for meaningful user interactions.</li>
-                </ul>
-            </div>
-            <!-- Error Prediction -->
-            <div class="p-6 inner-card shadow-inner">
-                <h3 class="text-xl font-semibold text-indigo-400 mb-2">Error Prediction</h3>
-                <ul class="list-disc list-inside space-y-2 text-gray-400">
-                    <li>Implemented machine learning algorithms for anomaly detection, reducing system errors by 30% and improving operational efficiency.</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Education Section -->
-        <section id="education" class="section-card p-8 sm:p-12 mb-12">
-            <h2 class="text-3xl font-bold text-center mb-8 tracking-wide">Education</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="p-6 inner-card shadow-inner">
-                    <h3 class="text-xl font-semibold text-indigo-400">University Of South Florida</h3>
-                    <p class="text-gray-400">Master's, CS</p>
-                    <p class="text-gray-500 text-sm">Jan 2024 - May 2025</p>
-                    <p class="text-gray-300 mt-2">GPA: 3.78</p>
-                </div>
-                <div class="p-6 inner-card shadow-inner">
-                    <h3 class="text-xl font-semibold text-indigo-400">Birla Institute of Technology and Science</h3>
-                    <p class="text-gray-400">Master's, Computer Science(Al and ML)</p>
-                    <p class="text-gray-500 text-sm">2021-2023</p>
-                    <p class="text-gray-300 mt-2">GPA: 3.2</p>
-                </div>
-                <div class="p-6 inner-card shadow-inner">
-                    <h3 class="text-xl font-semibold text-indigo-400">Koneru Lakshmaiah University</h3>
-                    <p class="text-gray-400">Bachelor, Electrical</p>
-                    <p class="text-gray-500 text-sm">2016-2020</p>
-                    <p class="text-gray-300 mt-2">GPA: 3.4</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="section-card p-8 sm:p-12 text-center">
-            <h2 class="text-3xl font-bold text-gray-100 mb-6 tracking-wide">Contact Me</h2>
-            <div class="flex flex-col items-center space-y-4 text-gray-400">
-                <p>Tampa, Florida</p>
-                <p>Phone: +1-813-363-9071</p>
-                <p>Email: venkatakiran.tummala@gmail.com</p>
-            </div>
-            <div class="flex justify-center gap-6 mt-6">
-                <a href="https://linkedin.com/in/venkatakiran-tummala" target="_blank" class="text-gray-400 hover:text-indigo-400 transition-colors duration-200">
-                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.763s.784-1.763 1.75-1.763 1.75.79 1.75 1.763-.783 1.763-1.75 1.763zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.355 7 2.093v7.142z"/>
-                    </svg>
-                </a>
-                <a href="https://github.com/yourusername" target="_blank" class="text-gray-400 hover:text-gray-200 transition-colors duration-200">
-                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.809 1.305 3.493.998.108-.77.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.465-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.772.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                    </svg>
-                </a>
-            </div>
-        </section>
-
+            </section>
+        </div>
     </main>
 
-    <footer class="bg-gray-900 text-gray-400 text-center py-6 mt-12">
+    <footer class="bg-gray-900 text-gray-400 text-center py-6">
         <p class="text-sm tracking-wide">&copy; 2025 Venkata Kiran Kumar Tummala. All rights reserved.</p>
     </footer>
 
