@@ -18,8 +18,5 @@ This portfolio is built with:
 Frontend: React / Next.js / HTML / CSS 
 Backend: Node.js / Express 
 
-Deployment: GitHub Pages / Vercel / Netlify (replace with your deployment platform)
+Deployment: GitHub Pages 
 
-🚀 Getting Started
-
-To run this project locally:
